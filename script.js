@@ -45,7 +45,10 @@ let checkOrder = ()=>{
         }
     }
     if(clickedOrder.length == order.length){
+        score++;
+        placar();
         alert(`Pontuação: ${score}\nVocê acertou! Iniciando próximo nível!`);
+        
         nextLevel();
     }
 }
@@ -64,6 +67,11 @@ let click = (color)=>{
    
 }
 
+let placar = ()=>{
+    valor1=(`Pontos: ${score}`)
+    document.getElementById("pontuacao").innerHTML = valor1; 
+}
+
 //função que retorna a cor
 let createColorElement = (color)=>{
     if(color ==0){
@@ -80,13 +88,14 @@ let createColorElement = (color)=>{
 //Função para proximo nivel do jogo
 
 let nextLevel = ()=>{
-    score++;
+    
     shuffleOrder();
 }
 
 //função para Game Over
 let gameOver = () =>{
     alert(`Pontuação: ${score}!\nVocê perdeu o jogo\nClique em OK para iniciar um novo Jogo`);
+
     order = [];
     clickedOrder = [];
 
@@ -97,7 +106,8 @@ let gameOver = () =>{
 let playGame = ()=>{
     alert('Bem vindo ao Gênesis! Iniciando novo jogo!');
     score = 0;
-
+    nivel = 0;
+    placar();
     nextLevel();
 }
 /*

@@ -1,3 +1,8 @@
+@font-face{
+    font-family: Titulo;
+    src: url(fontes/ANODETONOONE.TTF)
+}
+
 body{
     margin: 0;
     background-color: rgb(208, 255, 239);
@@ -49,4 +54,16 @@ body{
 
 .selected{
     opacity: 0.2;
+}
+.placar{
+    margin: 100px 100px;
+    width: 400px;
+    height: 100px;
+    
+    position: absolute;
+    font-size: 40px;
+    font-family:Titulo;
+    color: brown;
+    
+    
 }
