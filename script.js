@@ -29,10 +29,11 @@ let lightColor = (element, number)=>{
     number =number * 500;
     setTimeout(()=>{
         element.classList.add('selected');
+        
     }, number -250);
     setTimeout(()=>{
         element.classList.remove('selected');
-    });
+    },number );
 }
 
 //checa se os botões clicados são os mesmos da ordem gerada no jogo
@@ -106,6 +107,7 @@ yellow.addEventListener('click', click(2));
 blue.addEventListener('click', click(3));
 */
 //eventos de clique para as cores
+
 green.onclick = () => click(0);
 red.onclick = () => click(1);
 yellow.onclick = () => click(2);
